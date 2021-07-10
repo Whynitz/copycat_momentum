@@ -63,6 +63,7 @@ body {
     font-size:2em;
     text-align: center;
     background-color: transparent;
+    color: white;
     border: 2px solid white;
 }
 
@@ -70,6 +71,7 @@ body {
     height: 55px;
     font-size: 2em;
     background-color: transparent;
+    color: white;
     border: none;
     border-bottom: 2px solid white;
 }
@@ -79,7 +81,7 @@ body {
     font-style: italic;
 }
 
-#login-input:focus, #todo-input:focus {
+#login-input:focus, #todo-input:focus, #name-reinput:focus {
     color: white; 
     outline:none;
 }
@@ -88,8 +90,22 @@ body {
     color: transparent;
 }
 
-h1#greeting {
+#greeting, #name-reinput {
     margin-top:0;
+    font-size: 40px;
+    font-weight: 570;
+    
+}
+
+#name-reinput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 4px solid white;
+    color: white;
+}
+
+#reinput-form {
+    display:inline;
 }
 
 #todo-text {

@@ -14,19 +14,17 @@ function onGeoSuccess(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
     getWeather(lat,lon);
-    const coords = {lat, lon};
-    localStorage.setItem("coords", JSON.stringify(coords));
 }
 
 function onGeoError() {
     alert("Can't find you.");
 }
 
-const coords = localStorage.getItem("coords")
-
 navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError, {maximumAge: Infinity});
 
 /*
+const coords = localStorage.getItem("coords")
+
 if (coords) {
     const parsedCoords = JSON.parse(coords);
     const lat = parsedCoords.lat;
