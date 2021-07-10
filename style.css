@@ -42,7 +42,7 @@ body {
     font-weight:600;
     font-style:italic;
     top: 17px;
-    right: 32px;
+    right: 42px;
 }
 
 #bgImage {
@@ -58,7 +58,7 @@ body {
     margin:30px 0 30px 0;
 }
 
-#login-input, #todo-input {
+#login-input{
     height: 55px;
     font-size:2em;
     text-align: center;
@@ -67,19 +67,25 @@ body {
 }
 
 #todo-input {
+    height: 55px;
     font-size: 2em;
+    background-color: transparent;
     border: none;
     border-bottom: 2px solid white;
 }
 
-#login-input::placeholder, #todo-input::placeholder {
+#login-input::placeholder{
     color: white;
     font-style: italic;
 }
 
 #login-input:focus, #todo-input:focus {
-    color: white;
+    color: white; 
     outline:none;
+}
+
+#login-input:focus::placeholder {
+    color: transparent;
 }
 
 h1#greeting {
@@ -96,6 +102,7 @@ h1#greeting {
 
 .done {
     text-decoration: line-through;
+    text-decoration-thickness: 2.6px;
 }
 
 button {
