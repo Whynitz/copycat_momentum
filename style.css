@@ -94,9 +94,13 @@ h1#greeting {
     font-size: 1.2em;
 }
 
+.done {
+    text-decoration: line-through;
+}
+
 button {
     padding-left:5px; padding-right:5px; 
-    margin: 7px;
+    margin: 10px;
     border:none;
     background-color: black;
     color: white;

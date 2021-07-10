@@ -10,9 +10,13 @@ function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
+function doneToDo(event) {
+    const toDo = event.target;
+    toDo.classList.toggle("done");
+}
+
 function deleteToDo(event) {
     const li = event.target.parentElement;
-    console.log(li.id);
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
     li.remove();
@@ -24,6 +28,7 @@ function paintToDo(newToDoObj) {
 
     const span = document.createElement("span");
     span.innerText = newToDoObj.text;
+    span.addEventListener("click", doneToDo);
 
     const button = document.createElement("button");
     button.innerText = "×";
